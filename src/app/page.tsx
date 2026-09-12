@@ -237,7 +237,7 @@ export default function Home() {
                     <Pie data={pieData} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={60} outerRadius={80} paddingAngle={5}>
                       {pieData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.color} />)}
                     </Pie>
-                    <Tooltip formatter={(val: number) => `${Math.round(val)} קק"ל`} />
+                    <Tooltip formatter={(val: any) => `${Math.round(Number(val) || 0)} קק"ל`} />
                     <Legend verticalAlign="bottom" height={36} />
                   </PieChart>
                 </ResponsiveContainer>
