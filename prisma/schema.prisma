@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Settings {
+  id            Int      @id @default(1)
+  gender        String   @default("male") // "male" or "female"
+  age           Int      @default(29)
+  height        Float    @default(177.0) // in cm
+  activityLevel Float    @default(1.55)
+  targetDeficit Float    @default(500.0) // calories
+  proteinPerKg  Float    @default(2.0)
+  updatedAt     DateTime @updatedAt
+}
+
+model WeightLog {
+  id        Int      @id @default(autoincrement())
+  date      DateTime @default(now())
+  weight    Float    // in kg
+  createdAt DateTime @default(now())
+}
+
+model Meal {
+  id        Int      @id @default(autoincrement())
+  name      String
+  calories  Float
+  protein   Float
+  carbs     Float
+  fat       Float
+  source    String   @default("manual") // "whatsapp" or "manual"
+  date      DateTime @default(now()) // Can be set to a specific day
+  createdAt DateTime @default(now())
+}

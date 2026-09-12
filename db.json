@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "id": 1,
+    "gender": "male",
+    "age": 29,
+    "height": 177,
+    "activityLevel": 1.55,
+    "targetDeficit": 500,
+    "proteinPerKg": 1.5
+  },
+  "weightLogs": [
+    {
+      "id": 1,
+      "date": "2026-09-12T09:52:57.312Z",
+      "weight": 110
+    }
+  ],
+  "meals": [
+    {
+      "name": "נס קפה",
+      "originalText": "נס קפה ",
+      "calories": 50,
+      "protein": 2.5,
+      "carbs": 7,
+      "fat": 2,
+      "source": "web",
+      "id": 1789211209246,
+      "date": "2026-09-12T11:06:49.246Z"
+    }
+  ]
+}
