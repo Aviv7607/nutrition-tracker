@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     let settings;
     
     if (current) {
-      settings = await prisma.settings.update({ data });
+      settings = await prisma.settings.update({ where: { id: current.id }, data });
     } else {
       settings = await prisma.settings.create({ data });
     }
